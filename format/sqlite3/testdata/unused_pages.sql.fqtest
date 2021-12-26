@@ -1,0 +1,234 @@
+$ fq 'dv, torepr' unused_pages.sql.db
+       |00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f|0123456789abcdef|.{}: unused_pages.sql.db (sqlite3) 0x0-0x6fff.7 (28672)
+       |                                               |                |  header{}: 0x0-0x63.7 (100)
+0x00000|53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00|SQLite format 3.|    magic: "SQLite format 3\x00" (valid) 0x0-0xf.7 (16)
+0x00010|10 00                                          |..              |    page_size: 4096 0x10-0x11.7 (2)
+0x00010|      01                                       |  .             |    write_version: "legacy" (1) 0x12-0x12.7 (1)
+0x00010|         01                                    |   .            |    read_version: "legacy" (1) 0x13-0x13.7 (1)
+0x00010|            00                                 |    .           |    unused_space: 0 0x14-0x14.7 (1)
+0x00010|               40                              |     @          |    maximum_embedded_payload_fraction: 64 0x15-0x15.7 (1)
+0x00010|                  20                           |                |    minimum_embedded_payload_fraction: 32 0x16-0x16.7 (1)
+0x00010|                     20                        |                |    leaf_payload_fraction: 32 0x17-0x17.7 (1)
+0x00010|                        00 00 00 07            |        ....    |    file_change_counter: 7 0x18-0x1b.7 (4)
+0x00010|                                    00 00 00 07|            ....|    database_size_pages: 7 0x1c-0x1f.7 (4)
+0x00020|00 00 00 04                                    |....            |    page_number_freelist: 4 0x20-0x23.7 (4)
+0x00020|            00 00 00 02                        |    ....        |    total_number_freelist: 2 0x24-0x27.7 (4)
+0x00020|                        00 00 00 01            |        ....    |    schema_cookie: 1 0x28-0x2b.7 (4)
+0x00020|                                    00 00 00 04|            ....|    schema_format_number: 4 0x2c-0x2f.7 (4)
+0x00030|00 00 00 00                                    |....            |    default_page_cache_size: 0 0x30-0x33.7 (4)
+0x00030|            00 00 00 00                        |    ....        |    page_number_largest_root_btree: 0 0x34-0x37.7 (4)
+0x00030|                        00 00 00 01            |        ....    |    text_encoding: "utf8" (1) 0x38-0x3b.7 (4)
+0x00030|                                    00 00 00 00|            ....|    user_version: 0 0x3c-0x3f.7 (4)
+0x00040|00 00 00 00                                    |....            |    incremental_vacuum_mode: 0 0x40-0x43.7 (4)
+0x00040|            00 00 00 00                        |    ....        |    application_id: 0 0x44-0x47.7 (4)
+0x00040|                        00 00 00 00 00 00 00 00|        ........|    reserved: raw bits (all zero) 0x48-0x5b.7 (20)
+0x00050|00 00 00 00 00 00 00 00 00 00 00 00            |............    |
+0x00050|                                    00 00 00 07|            ....|    version_valid_for: 7 0x5c-0x5f.7 (4)
+0x00060|00 2e 53 60                                    |..S`            |    sqlite_version_number: 3036000 0x60-0x63.7 (4)
+       |                                               |                |  pages[0:8]: 0x64-0x6ffc.7 (28569)
+       |                                               |                |    [0]{}: page 0x64-NA (0)
+       |                                               |                |      type: "page0_index_fill" 0x64-NA (0)
+       |                                               |                |    [1]{}: page 0x64-0xff9.7 (3990)
+0x00060|            0d                                 |    .           |      type: "table_leaf" (13) 0x64-0x64.7 (1)
+0x00060|               0f f8                           |     ..         |      start_freeblocks: 4088 0x65-0x66.7 (2)
+0x00060|                     00 02                     |       ..       |      page_cells: 2 0x67-0x68.7 (2)
+0x00060|                           0f 7f               |         ..     |      cell_start: 3967 0x69-0x6a.7 (2)
+0x00060|                                 00            |           .    |      cell_fragments: 0 0x6b-0x6b.7 (1)
+       |                                               |                |      cells_pointers[0:2]: 0x6c-0x6f.7 (4)
+0x00060|                                    0f 7f      |            ..  |        [0]: 3967 pointer 0x6c-0x6d.7 (2)
+0x00060|                                          0f d1|              ..|        [1]: 4049 pointer 0x6e-0x6f.7 (2)
+       |                                               |                |      cells[0:2]: 0xf7f-0xff7.7 (121)
+       |                                               |                |        [0]{}: cell 0xf7f-0xfd0.7 (82)
+0x00f70|                                             50|               P|          payload_len: 80 0xf7f-0xf7f.7 (1)
+0x00f80|01                                             |.               |          rowid: 1 0xf80-0xf80.7 (1)
+       |                                               |                |          payload{}: 0xf81-0xfd0.7 (80)
+0x00f80|   07                                          | .              |            length: 7 0xf81-0xf81.7 (1)
+       |                                               |                |            serials[0:5]: 0xf82-0xf87.7 (6)
+0x00f80|      17                                       |  .             |              [0]: 23 serial (text) 0xf82-0xf82.7 (1)
+0x00f80|         13                                    |   .            |              [1]: 19 serial (text) 0xf83-0xf83.7 (1)
+0x00f80|            13                                 |    .           |              [2]: 19 serial (text) 0xf84-0xf84.7 (1)
+0x00f80|               01                              |     .          |              [3]: 1 serial (int8) 0xf85-0xf85.7 (1)
+0x00f80|                  81 07                        |      ..        |              [4]: 135 serial (text) 0xf86-0xf87.7 (2)
+       |                                               |                |            contents[0:5]: 0xf88-0xfd0.7 (73)
+0x00f80|                        74 61 62 6c 65         |        table   |              [0]: "table" value 0xf88-0xf8c.7 (5)
+0x00f80|                                       61 61 61|             aaa|              [1]: "aaa" value 0xf8d-0xf8f.7 (3)
+0x00f90|61 61 61                                       |aaa             |              [2]: "aaa" value 0xf90-0xf92.7 (3)
+0x00f90|         02                                    |   .            |              [3]: 2 value 0xf93-0xf93.7 (1)
+0x00f90|            43 52 45 41 54 45 20 54 41 42 4c 45|    CREATE TABLE|              [4]: "CREATE TABLE aaa (\n    cint int primary key,\n    c"... value 0xf94-0xfd0.7 (61)
+0x00fa0|20 61 61 61 20 28 0a 20 20 20 20 63 69 6e 74 20| aaa (.    cint |
+*      |until 0xfd0.7 (61)                             |                |
+       |                                               |                |        [1]{}: cell 0xfd1-0xff7.7 (39)
+0x00fd0|   25                                          | %              |          payload_len: 37 0xfd1-0xfd1.7 (1)
+0x00fd0|      02                                       |  .             |          rowid: 2 0xfd2-0xfd2.7 (1)
+       |                                               |                |          payload{}: 0xfd3-0xff7.7 (37)
+0x00fd0|         06                                    |   .            |            length: 6 0xfd3-0xfd3.7 (1)
+       |                                               |                |            serials[0:5]: 0xfd4-0xfd8.7 (5)
+0x00fd0|            17                                 |    .           |              [0]: 23 serial (text) 0xfd4-0xfd4.7 (1)
+0x00fd0|               39                              |     9          |              [1]: 57 serial (text) 0xfd5-0xfd5.7 (1)
+0x00fd0|                  13                           |      .         |              [2]: 19 serial (text) 0xfd6-0xfd6.7 (1)
+0x00fd0|                     01                        |       .        |              [3]: 1 serial (int8) 0xfd7-0xfd7.7 (1)
+0x00fd0|                        00                     |        .       |              [4]: 0 serial (null) 0xfd8-0xfd8.7 (1)
+       |                                               |                |            contents[0:5]: 0xfd9-0xff7.7 (31)
+0x00fd0|                           69 6e 64 65 78      |         index  |              [0]: "index" value 0xfd9-0xfdd.7 (5)
+0x00fd0|                                          73 71|              sq|              [1]: "sqlite_autoindex_aaa_1" value 0xfde-0xff3.7 (22)
+0x00fe0|6c 69 74 65 5f 61 75 74 6f 69 6e 64 65 78 5f 61|lite_autoindex_a|
+0x00ff0|61 61 5f 31                                    |aa_1            |
+0x00ff0|            61 61 61                           |    aaa         |              [2]: "aaa" value 0xff4-0xff6.7 (3)
+0x00ff0|                     03                        |       .        |              [3]: 3 value 0xff7-0xff7.7 (1)
+       |                                               |                |              [4]: null value 0xff8-NA (0)
+       |                                               |                |      freeblocks[0:1]: 0xff8-0xff9.7 (2)
+       |                                               |                |        [0]{}: freeblock 0xff8-0xff9.7 (2)
+0x00ff0|                        00 00                  |        ..      |          next_offset: 0 0xff8-0xff9.7 (2)
+       |                                               |                |    [2]{}: page 0x1000-0x6e27.7 (24104)
+0x01000|0d                                             |.               |      type: "table_leaf" (13) 0x1000-0x1000.7 (1)
+0x01000|   0a 30                                       | .0             |      start_freeblocks: 2608 0x1001-0x1002.7 (2)
+0x01000|         00 02                                 |   ..           |      page_cells: 2 0x1003-0x1004.7 (2)
+0x01000|               08 40                           |     .@         |      cell_start: 2112 0x1005-0x1006.7 (2)
+0x01000|                     00                        |       .        |      cell_fragments: 0 0x1007-0x1007.7 (1)
+       |                                               |                |      cells_pointers[0:2]: 0x1008-0x100b.7 (4)
+0x01000|                        0c 20                  |        .       |        [0]: 3104 pointer 0x1008-0x1009.7 (2)
+0x01000|                              08 40            |          .@    |        [1]: 2112 pointer 0x100a-0x100b.7 (2)
+       |                                               |                |      cells[0:2]: 0x1840-0x6e27.7 (21992)
+       |                                               |                |        [0]{}: cell 0x1c20-0x4e27.7 (12808)
+       |                                               |                |          payload{}: 0x0-0x100c.7 (4109)
+ 0x0000|04                                             |.               |            length: 4 0x0-0x0.7 (1)
+       |                                               |                |            serials[0:2]: 0x1-0x3.7 (3)
+ 0x0000|   01                                          | .              |              [0]: 1 serial (int8) 0x1-0x1.7 (1)
+ 0x0000|      c0 1d                                    |  ..            |              [1]: 8221 serial (text) 0x2-0x3.7 (2)
+       |                                               |                |            contents[0:2]: 0x4-0x100c.7 (4105)
+ 0x0000|            02                                 |    .           |              [0]: 2 value 0x4-0x4.7 (1)
+ 0x0000|               32 41 42 42 42 42 42 42 42 42 42|     2ABBBBBBBBB|              [1]: "2ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"... value 0x5-0x100c.7 (4104)
+ 0x0010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+ *     |until 0x100c.7 (end) (4104)                    |                |
+0x01c20|a0 0d                                          |..              |          payload_len: 4109 0x1c20-0x1c21.7 (2)
+0x01c20|      02                                       |  .             |          rowid: 2 0x1c22-0x1c22.7 (1)
+       |                                               |                |          overflow_pages[0:2]: 0x1c23-0x4e27.7 (12805)
+       |                                               |                |            [0]{}: overflow_page 0x1c23-0x1e0f.7 (493)
+0x01c20|         04 01 c0 1d 02 32 41 42 42 42 42 42 42|   .....2ABBBBBB|              data: raw bits 0x1c23-0x1e0b.7 (489)
+0x01c30|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x1e0b.7 (489)                           |                |
+0x01e00|                                    00 00 00 05|            ....|              next_page: 5 0x1e0c-0x1e0f.7 (4)
+       |                                               |                |            [1]{}: overflow_page 0x4000-0x4e27.7 (3624)
+0x04000|00 00 00 00                                    |....            |              next_page: 0 0x4000-0x4003.7 (4)
+0x04000|            42 42 42 42 42 42 42 42 42 42 42 42|    BBBBBBBBBBBB|              data: raw bits 0x4004-0x4e27.7 (3620)
+0x04010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x4e27.7 (3620)                          |                |
+       |                                               |                |        [1]{}: cell 0x1840-0x6e27.7 (21992)
+       |                                               |                |          payload{}: 0x0-0x100c.7 (4109)
+ 0x0000|04                                             |.               |            length: 4 0x0-0x0.7 (1)
+       |                                               |                |            serials[0:2]: 0x1-0x3.7 (3)
+ 0x0000|   01                                          | .              |              [0]: 1 serial (int8) 0x1-0x1.7 (1)
+ 0x0000|      c0 1d                                    |  ..            |              [1]: 8221 serial (text) 0x2-0x3.7 (2)
+       |                                               |                |            contents[0:2]: 0x4-0x100c.7 (4105)
+ 0x0000|            04                                 |    .           |              [0]: 4 value 0x4-0x4.7 (1)
+ 0x0000|               34 41 42 42 42 42 42 42 42 42 42|     4ABBBBBBBBB|              [1]: "4ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"... value 0x5-0x100c.7 (4104)
+ 0x0010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+ *     |until 0x100c.7 (end) (4104)                    |                |
+0x01840|a0 0d                                          |..              |          payload_len: 4109 0x1840-0x1841.7 (2)
+0x01840|      04                                       |  .             |          rowid: 4 0x1842-0x1842.7 (1)
+       |                                               |                |          overflow_pages[0:2]: 0x1843-0x6e27.7 (21989)
+       |                                               |                |            [0]{}: overflow_page 0x1843-0x1a2f.7 (493)
+0x01840|         04 01 c0 1d 04 34 41 42 42 42 42 42 42|   .....4ABBBBBB|              data: raw bits 0x1843-0x1a2b.7 (489)
+0x01850|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x1a2b.7 (489)                           |                |
+0x01a20|                                    00 00 00 07|            ....|              next_page: 7 0x1a2c-0x1a2f.7 (4)
+       |                                               |                |            [1]{}: overflow_page 0x6000-0x6e27.7 (3624)
+0x06000|00 00 00 00                                    |....            |              next_page: 0 0x6000-0x6003.7 (4)
+0x06000|            42 42 42 42 42 42 42 42 42 42 42 42|    BBBBBBBBBBBB|              data: raw bits 0x6004-0x6e27.7 (3620)
+0x06010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x6e27.7 (3620)                          |                |
+       |                                               |                |      freeblocks[0:2]: 0x1a30-0x1e11.7 (994)
+       |                                               |                |        [0]{}: freeblock 0x1a30-0x1c1f.7 (496)
+0x01a30|0e 10                                          |..              |          next_offset: 3600 0x1a30-0x1a31.7 (2)
+0x01a30|      01 f0                                    |  ..            |          size: 496 0x1a32-0x1a33.7 (2)
+0x01a30|            00 00 00 00 00 00 00 00 00 00 00 00|    ............|          space: raw bits 0x1a34-0x1c1f.7 (492)
+0x01a40|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|
+*      |until 0x1c1f.7 (492)                           |                |
+       |                                               |                |        [1]{}: freeblock 0x1e10-0x1e11.7 (2)
+0x01e10|00 00                                          |..              |          next_offset: 0 0x1e10-0x1e11.7 (2)
+       |                                               |                |    [3]{}: page 0x2000-0x2ffd.7 (4094)
+0x02000|0a                                             |.               |      type: "index_leaf" (10) 0x2000-0x2000.7 (1)
+0x02000|   0f f0                                       | ..             |      start_freeblocks: 4080 0x2001-0x2002.7 (2)
+0x02000|         00 02                                 |   ..           |      page_cells: 2 0x2003-0x2004.7 (2)
+0x02000|               0f ea                           |     ..         |      cell_start: 4074 0x2005-0x2006.7 (2)
+0x02000|                     00                        |       .        |      cell_fragments: 0 0x2007-0x2007.7 (1)
+       |                                               |                |      cells_pointers[0:2]: 0x2008-0x200b.7 (4)
+0x02000|                        0f f6                  |        ..      |        [0]: 4086 pointer 0x2008-0x2009.7 (2)
+0x02000|                              0f ea            |          ..    |        [1]: 4074 pointer 0x200a-0x200b.7 (2)
+       |                                               |                |      cells[0:2]: 0x2fea-0x2ffb.7 (18)
+       |                                               |                |        [0]{}: cell 0x2ff6-0x2ffb.7 (6)
+0x02ff0|                  05                           |      .         |          payload_len: 5 0x2ff6-0x2ff6.7 (1)
+       |                                               |                |          payload{}: 0x2ff7-0x2ffb.7 (5)
+0x02ff0|                     03                        |       .        |            length: 3 0x2ff7-0x2ff7.7 (1)
+       |                                               |                |            serials[0:2]: 0x2ff8-0x2ff9.7 (2)
+0x02ff0|                        01                     |        .       |              [0]: 1 serial (int8) 0x2ff8-0x2ff8.7 (1)
+0x02ff0|                           01                  |         .      |              [1]: 1 serial (int8) 0x2ff9-0x2ff9.7 (1)
+       |                                               |                |            contents[0:2]: 0x2ffa-0x2ffb.7 (2)
+0x02ff0|                              02               |          .     |              [0]: 2 value 0x2ffa-0x2ffa.7 (1)
+0x02ff0|                                 02            |           .    |              [1]: 2 value 0x2ffb-0x2ffb.7 (1)
+       |                                               |                |        [1]{}: cell 0x2fea-0x2fef.7 (6)
+0x02fe0|                              05               |          .     |          payload_len: 5 0x2fea-0x2fea.7 (1)
+       |                                               |                |          payload{}: 0x2feb-0x2fef.7 (5)
+0x02fe0|                                 03            |           .    |            length: 3 0x2feb-0x2feb.7 (1)
+       |                                               |                |            serials[0:2]: 0x2fec-0x2fed.7 (2)
+0x02fe0|                                    01         |            .   |              [0]: 1 serial (int8) 0x2fec-0x2fec.7 (1)
+0x02fe0|                                       01      |             .  |              [1]: 1 serial (int8) 0x2fed-0x2fed.7 (1)
+       |                                               |                |            contents[0:2]: 0x2fee-0x2fef.7 (2)
+0x02fe0|                                          04   |              . |              [0]: 4 value 0x2fee-0x2fee.7 (1)
+0x02fe0|                                             04|               .|              [1]: 4 value 0x2fef-0x2fef.7 (1)
+       |                                               |                |      freeblocks[0:2]: 0x2ff0-0x2ffd.7 (14)
+       |                                               |                |        [0]{}: freeblock 0x2ff0-0x2ff5.7 (6)
+0x02ff0|0f fc                                          |..              |          next_offset: 4092 0x2ff0-0x2ff1.7 (2)
+0x02ff0|      00 06                                    |  ..            |          size: 6 0x2ff2-0x2ff3.7 (2)
+0x02ff0|            00 00                              |    ..          |          space: raw bits 0x2ff4-0x2ff5.7 (2)
+       |                                               |                |        [1]{}: freeblock 0x2ffc-0x2ffd.7 (2)
+0x02ff0|                                    00 00      |            ..  |          next_offset: 0 0x2ffc-0x2ffd.7 (2)
+       |                                               |                |    [4]{}: page 0x3000-0x3ffc.7 (4093)
+0x03000|00                                             |.               |      type: 0 0x3000-0x3000.7 (1)
+0x03000|   00 00 00 00 00 00 01 00 00 00 06 42 42 42 42| ...........BBBB|      data: raw bits 0x3001-0x3ffc.7 (4092)
+0x03010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x3ffc.7 (4092)                          |                |
+       |                                               |                |    [5]{}: page 0x4000-0x4ffc.7 (4093)
+0x04000|00                                             |.               |      type: 0 0x4000-0x4000.7 (1)
+0x04000|   00 00 00 42 42 42 42 42 42 42 42 42 42 42 42| ...BBBBBBBBBBBB|      data: raw bits 0x4001-0x4ffc.7 (4092)
+0x04010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x4ffc.7 (4092)                          |                |
+       |                                               |                |    [6]{}: page 0x5000-0x5ffc.7 (4093)
+0x05000|00                                             |.               |      type: 0 0x5000-0x5000.7 (1)
+0x05000|   00 00 00 42 42 42 42 42 42 42 42 42 42 42 42| ...BBBBBBBBBBBB|      data: raw bits 0x5001-0x5ffc.7 (4092)
+0x05010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x5ffc.7 (4092)                          |                |
+       |                                               |                |    [7]{}: page 0x6000-0x6ffc.7 (4093)
+0x06000|00                                             |.               |      type: 0 0x6000-0x6000.7 (1)
+0x06000|   00 00 00 42 42 42 42 42 42 42 42 42 42 42 42| ...BBBBBBBBBBBB|      data: raw bits 0x6001-0x6ffc.7 (4092)
+0x06010|42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42|BBBBBBBBBBBBBBBB|
+*      |until 0x6ffc.7 (4092)                          |                |
+0x00070|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|  unknown0: raw bits 0x70-0xf7e.7 (3855)
+*      |until 0xf7e.7 (3855)                           |                |
+0x00ff0|                              00 08 00 00 00 00|          ......|  unknown1: raw bits 0xffa-0xfff.7 (6)
+0x01000|                                    08 40 08 40|            .@.@|  unknown2: raw bits 0x100c-0x183f.7 (2100)
+0x01010|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|
+*      |until 0x183f.7 (2100)                          |                |
+0x01e10|      01 f0 00 00 00 00 00 00 00 00 00 00 00 00|  ..............|  unknown3: raw bits 0x1e12-0x1fff.7 (494)
+0x01e20|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|
+*      |until 0x1fff.7 (494)                           |                |
+0x02000|                                    0f ea 0f ea|            ....|  unknown4: raw bits 0x200c-0x2fe9.7 (4062)
+0x02010|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|
+*      |until 0x2fe9.7 (4062)                          |                |
+0x02ff0|                                          00 04|              ..|  unknown5: raw bits 0x2ffe-0x2fff.7 (2)
+0x03ff0|                                       00 00 00|             ...|  unknown6: raw bits 0x3ffd-0x3fff.7 (3)
+0x04ff0|                                       00 00 00|             ...|  unknown7: raw bits 0x4ffd-0x4fff.7 (3)
+0x05ff0|                                       00 00 00|             ...|  unknown8: raw bits 0x5ffd-0x5fff.7 (3)
+0x06ff0|                                       00 00 00|             ...|  unknown9: raw bits 0x6ffd-0x6fff.7 (3)
+{
+  "aaa": [
+    [
+      2,
+      "2ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC2"
+    ],
+    [
+      4,
+      "4ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC4"
+    ]
+  ]
+}
