@@ -62,6 +62,21 @@ func init() {
 	})
 }
 
+type intStack struct {
+	s []int
+}
+
+func (s *intStack) Push(n int) { s.s = append(s.s, n) }
+
+func (s *intStack) Pop() (int, bool) {
+	if len(s.s) == 0 {
+		return 0, false
+	}
+	var n int
+	n, s.s = s.s[0], s.s[1:]
+	return n, true
+}
+
 const sqlite3HeaderSize = 100
 
 const (
@@ -106,12 +121,14 @@ var serialTypeMapper = scalar.Fn(func(s scalar.S) (scalar.S, error) {
 	return s, nil
 })
 
+type pageType int
+
 const (
-	pageTypePtrmap             = 0x00
-	pageTypeBTreeIndexInterior = 0x02
-	pageTypeBTreeTableInterior = 0x05
-	pageTypeBTreeIndexLeaf     = 0x0a
-	pageTypeBTreeTableLeaf     = 0x0d
+	pageTypePtrmap             pageType = 0x00
+	pageTypeBTreeIndexInterior          = 0x02
+	pageTypeBTreeTableInterior          = 0x05
+	pageTypeBTreeIndexLeaf              = 0x0a
+	pageTypeBTreeTableLeaf              = 0x0d
 )
 
 var pageTypeMap = scalar.UToSymStr{
@@ -299,6 +316,14 @@ func sqlite3DecodeTreePage(d *decode.D, h sqlite3Header, x int64, payLoadLen int
 	}
 }
 
+func sqlite3SeekPage(d *decode.D, h sqlite3Header, i int) {
+	pageOffset := h.pageSize * int64(i)
+	if i == 0 {
+		pageOffset += sqlite3HeaderSize
+	}
+	d.SeekAbs(pageOffset * 8)
+}
+
 func sqlite3Decode(d *decode.D, in interface{}) interface{} {
 	var h sqlite3Header
 
@@ -340,6 +365,49 @@ func sqlite3Decode(d *decode.D, in interface{}) interface{} {
 		}
 	})
 
+	// pageTypes := map[int]pageType{}
+	// pageVisitStack := &intStack{}
+	// pageVisitStack.Push(0)
+
+	// for {
+	// 	i, ok := pageVisitStack.Pop()
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	if _, ok := pageTypes[i]; ok {
+	// 		d.Fatalf("page %d already visited", i)
+	// 	}
+
+	// 	sqlite3SeekPage(d, h, i)
+	// 	typ := d.U8()
+
+	// 	switch typ {
+	// 	case pageTypeBTreeIndexInterior,
+	// 		pageTypeBTreeTableInterior:
+
+	// 		d.U16() // start_free_blocks
+	// 		d.U16() // cell_start
+	// 		d.U8()  // cell_fragments
+	// 		rightPointer := d.U32()
+
+	// 		pageCells := d.U16()
+	// 		for i := uint64(0); i < pageCells; i++ {
+
+	// 		}
+
+	// 		switch typ {
+	// 		case pageTypeBTreeIndexInterior:
+
+	// 		}
+
+	// 	default:
+	// 		d.Fatalf("asd")
+	// 	}
+
+	// }
+
+	// return nil
+
 	d.FieldArray("pages", func(d *decode.D) {
 		d.RangeSorted = false
 
@@ -348,6 +416,16 @@ func sqlite3Decode(d *decode.D, in interface{}) interface{} {
 			d.FieldValueStr("type", "page0_index_fill")
 		})
 
+		// for {
+		// i, ok := pageStack.Pop()
+		// if !ok {
+		// 	break
+		// }
+		// if _, ok := pageSeen[i]; ok {
+		// 	d.Fatalf("page %d already visited", i)
+		// }
+		// pageSeen[i] = struct{}{}
+
 		for i := 0; i < h.databaseSizePages; i++ {
 			pageOffset := h.pageSize * int64(i)
 			d.SeekAbs(pageOffset * 8)
@@ -355,6 +433,7 @@ func sqlite3Decode(d *decode.D, in interface{}) interface{} {
 			if i == 0 {
 				d.SeekRel(sqlite3HeaderSize * 8)
 			}
+			sqlite3SeekPage(d, h, i)
 
 			d.FieldStruct("page", func(d *decode.D) {
 				typ := d.FieldU8("type", pageTypeMap)
